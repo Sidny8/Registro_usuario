@@ -21,48 +21,37 @@
         text-align: center;
     }</style>
     <div class = "mitad izquierda">
-    <form method = "POST" action ="">
+    <form action="datos.php" method = "POST">
         <br><br><br>
         <label for = "num1">&emsp;&emsp; Ingrese su nombre: &emsp;</label>
-        <input type = "string" pattern="[a-zA-Z]+"  name = "num1" id= "num1" class="input-alto" required>
+        <input type = "text"  name = "num1" id= "num1" class="input-alto" required>
         <br><br><br>
         <label for = "num2">&emsp;&emsp; Ingrese su nombre de usuario: &emsp;</label>
-        <input type = "string" pattern="[a-zA-Z]+"  name = "num2" id= "num2" class="input-alto" required>
+        <input type = "text"  name = "num2" id= "num2" class="input-alto" required>
         <br><br><br>
         <label for = "num3">&emsp;&emsp; Contraseña:</label>
-        <input  type="text" minlength="6"  name = "num3" id= "num3" class="input-alto" required>
+        <input  type="password" minlength="6"  name = "num3" id= "num3" class="input-alto" required>
         <br><br><br>
         <label for = "num4">&emsp;&emsp; Comprobar Contraseña:</label>
-        <input  type="text" minlength="6" name = "num4" id= "num4" class="input-alto" required>
+        <input  type="password" minlength="6" name = "num4" id= "num4" class="input-alto" required>
         <br><br><br>
-        <button type = "submit" name = "calcular" style="width: 100px">Crear</button>
+        <button type = "submit" name = "calcular" style="width: 100px">Registrar</button>
         <br><br>
     </form>
+   <?php
+    if (isset($_GET['mensaje']) && $_GET['mensaje'] === 'registrado') {
+        echo 'Usuario registrado!';
+    }else{
+        echo 'Contraseña diferente';
+    }
+    ?>
+
     </div>
     <div class= "linea"></div>
     <div class = "mitad derecha">
-        <?php
-            session_start();
-            if($_SERVER["REQUEST_METHOD"]==="POST" && isset($_POST["calcular"]) && $_POST['num3']===$_POST['num4']){
-                $NomC=$_POST['num1'];
-                $Nom=$_POST['num2'];
-                $Con=$_POST['num3'];
-
-                if (!isset($_SESSION['usuarios'])) {
-                    $_SESSION['usuarios'] = [];
-                }else{
-                    $_SESSION['usuarios'][]= ["NombreC" => $NomC, 
-                                        "Name" => $Nom, 
-                                        "Contraseña" => password_hash($Con,PASSWORD_DEFAULT) 
-                                    ];
-                }
-                $user=end($_SESSION['usuarios']);
-                echo $user["NombreC"];
- 
-            }else{
-                echo "Contraseña diferente";
-            }
-        ?>
+    <a class="boton" href="login.php">
+        login
+    </a>
     </div>
 </body>
 </html>
