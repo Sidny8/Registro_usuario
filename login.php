@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASCII for first four characters </title>
-    <link rel="stylesheet" href="style/Problema1.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>LOGIN</h1><hr>
@@ -18,7 +18,7 @@
         padding: 8px;
         font-size: 16px;
         width: 120px;
-        border: rgb(63, 53, 30) 3px solid;
+        border: none;
         background-color:#fff;
         border-radius: 25%;
         text-align: center;
@@ -54,7 +54,7 @@
                     }
                 }
             if($encontrado>=1){
-                echo"Usuario encontrado<br>";
+                echo"<h3>Usuario encontrado<br></h3>";
                 echo"Nombre: ".$user["NombreC"]."<br>";
                 echo"Nombre de usuario: ".$user["Name"]."<br>";
                 echo"Contraseña encriptada:".$user["Contraseña"]."<br>";

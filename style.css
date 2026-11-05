@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(255, 196, 154);
+    color:rgb(75, 48, 30) ;
+}
+h1{
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+.todo{
+    border: rgb(75, 48, 30) 5px solid;
+    border-radius: 12px;
+    margin:25px 550px 30px;
+}
+form{
+    font-size: 30px;
+    font-weight: 50px;
+}
+.mensaje{
+    text-align: center;
+    font-size: 20px;
+}
+.buton{
+    font-family: 'Times New Roman', Times, serif;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    color: rgb(75, 48, 30);
+}
+.boton{
+    padding: 10px 30px;
+    margin-left: 15px;
+    background-color: aliceblue;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    color: rgb(75, 48, 30);
+}
+.boton:hover,.buton:hover{
+    background-color:rgb(75, 48, 30);
+    color:aliceblue;
+    cursor:pointer;
+}
+hr{
+    width: 320px;
+    height: 4px;
+    border: none;
+    background-color: rgb(75, 48, 30);
+}
