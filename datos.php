@@ -24,4 +24,4 @@
         header("Location: registro.php?mensaje=no");
         exit();
     }
-    ?>
+?>

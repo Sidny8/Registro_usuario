@@ -49,3 +49,6 @@ hr{
     border: none;
     background-color: rgb(75, 48, 30);
 }
+span{
+    font-size: 15px;
+}

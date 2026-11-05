@@ -40,10 +40,12 @@
     </form>
    <?php
     echo"<div class ='mensaje'>";
-    if (isset($_GET['mensaje']) && $_GET['mensaje'] === 'registrado') {
-        echo 'Usuario registrado!<br> </div>';
-    }else{
-        echo 'Contraseña diferente<br></div>';
+    if (isset($_GET['mensaje'])) {
+        if ($_GET['mensaje'] === 'registrado') {
+            echo 'Usuario registrado!';
+        } else {
+            echo 'Contraseña diferente<br>';
+        }
     }
     ?>
     <br>

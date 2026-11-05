@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class = "todo">
     <h1>LOGIN</h1><hr>
     <div class= contenedor>
     <style>
@@ -25,20 +26,18 @@
     }</style>
     <div class = "mitad izquierda">
     <form method = "POST" action ="">
-        <br><br><br>
-        <label for = "num2">&emsp;&emsp; Ingrese su nombre de usuario: &emsp;</label>
+        <br>
+        <label for = "num2">&emsp;&emsp; Ingrese usuario:</label>
         <input type = "text"  name = "num2" id= "num2" class="input-alto" required>
-        <br><br><br>
+        <br><br>
         <label for = "num3">&emsp;&emsp; Contraseña:</label>
         <input  type="password" minlength="6"  name = "num3" id= "num3" class="input-alto" required>
-        <br><br><br>
-        <button type = "submit" name = "buscar" style="width: 100px">Buscar</button>
         <br><br>
+        <button class="buton"  type = "submit" name = "buscar" style="width: 100px">Buscar</button>
+        <br>
     </form>
-    </div>
-    <div class= "linea"></div>
-    <div class = "mitad derecha">
         <?php
+            echo"<div class ='mensaje'>";
             if($_SERVER["REQUEST_METHOD"]==="POST" && isset($_POST["buscar"])){
                 $Nom=$_POST['num2'];
                 $Con=$_POST['num3'];
@@ -57,20 +56,25 @@
                 echo"<h3>Usuario encontrado<br></h3>";
                 echo"Nombre: ".$user["NombreC"]."<br>";
                 echo"Nombre de usuario: ".$user["Name"]."<br>";
-                echo"Contraseña encriptada:".$user["Contraseña"]."<br>";
+                echo"Contraseña:<br><span>".$user["Contraseña"]."</span><br>";
+                echo"Contraseña real:".$Con."<br>";
                 if (password_verify($Con, $user["Contraseña"])) {
-                    echo "Bienvenido al sistema";
+                    echo "<h3>Bienvenido al sistema</h3></div>";
                 } else {
-                    echo "Contraseña incorrecta";
+                    echo "Contraseña incorrecta</div>";
                 }
             }else{
-                echo"Usuario no visto";
+                echo"Usuario no visto</div>";
             }
         }
         ?>
+        <br>
+        <a class="boton" href="registro.php">
+            registro
+        </a>
+        <br>
+        <label></label>
+        <br>
     </div>
-    <a class="boton" href="registro.php">
-        registro
-    </a>
 </body>
 </html>
