@@ -6,12 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCII for first four characters </title>
+    <title>LOGIN</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class = "todo">
-    <h1>LOGIN</h1><hr>
+    <h1><img src='imagenes/portapapeles.png'>LOGIN<img src='imagenes/portapapeles.png'></h1><hr>
     <div class= contenedor>
     <style>
         .input-alto {
@@ -53,7 +53,7 @@
                     }
                 }
             if($encontrado>=1){
-                echo"<h3>Usuario encontrado<br></h3>";
+                echo"<h3>Usuario encontrado<img src='imagenes/comprobado.png'><br></h3>";
                 echo"Nombre: ".$user["NombreC"]."<br>";
                 echo"Nombre de usuario: ".$user["Name"]."<br>";
                 echo"Contraseña:<br><span>".$user["Contraseña"]."</span><br>";
@@ -64,7 +64,7 @@
                     echo "Contraseña incorrecta</div>";
                 }
             }else{
-                echo"Usuario no visto</div>";
+                echo"Usuario no visto<img src='imagenes/rechazado.png'></div>";
             }
         }
         ?>

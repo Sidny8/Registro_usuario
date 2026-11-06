@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASCII for first four characters </title>
+    <title>REGISTRO </title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class = "todo">
-    <h1>REGISTRO DE USUARIO</h1><hr>
+
+    <h1><img src="imagenes/key-set.png" >
+    REGISTRO DE USUARIO
+    <img src="imagenes/key-set.png" >
+    </h1><hr>
     <div class= contenedor>
     <style>
         .input-alto {
@@ -32,7 +36,7 @@
         <label for = "num3">&emsp;&emsp; Contraseña:&emsp;&emsp;&emsp;</label>
         <input  type="password" minlength="6"  name = "num3" id= "num3" class="input-alto" required>
         <br><br>
-        <label for = "num4">&emsp; Comfirmar Contraseña:</label>
+        <label for = "num4">&emsp; Confirmar contraseña:</label>
         <input  type="password" minlength="6" name = "num4" id= "num4" class="input-alto" required>
         <br><br>
         <button class="buton" type = "submit" name = "calcular" style="width: 100px">Registrar</button>
@@ -42,13 +46,13 @@
     echo"<div class ='mensaje'>";
     if (isset($_GET['mensaje'])) {
         if ($_GET['mensaje'] === 'registrado') {
-            echo 'Usuario registrado!';
+            echo "<img src='imagenes/comprobado.png'>Usuario registrado!";
         } else {
             echo 'Contraseña diferente<br>';
         }
     }
     ?>
-    <br>
+    <br><br>
     <a class="boton" href="login.php">
         login
     </a>
